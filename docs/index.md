@@ -1,0 +1,153 @@
+# Statistical testing using R
+## Table of contents
+
+## Data
+Load the data set into the R environment. This data set has been collected by Walmart for researching variables that might influence the CPI score (**C**onsumer **p**rice **i**ndex).
+[DOWNLOAD HERE]()
+
+
+```R
+### your code here ###
+```
+
+
+## Simple plots
+Making some simple plots is a smart way of knowing our data set in the first stage. Try to make all following plots. What conclusion can you make by observing?
+
+#### A side-by-side boxplot
+```R
+### your code here ###
+```
+
+
+#### A scatter plot. x: Unemployment, y: CPI
+```R
+### your code here ###
+```
+
+
+
+## Descriptive statistics
+Calculate **sample size**, **Mean**, **SD**, **variance** and **IQR** of CPI each year and present it in a table. This should be a data frame or a matrix with six columns.
+
+```R
+### your code here ###
+```
+
+
+## t-test
+#### Test if the CPI score in 2010 and 2012 are the same.
+Assume that the population variances are not the same. 
+- _Which t-test should you choose?_  
+- _What’s your hypothesis? (H0 vs H1)_  
+
+Run the test in R. What are your conclusions?
+
+```R
+### your code here ###
+```
+
+#### Test if the fuel price in 2010 and 2012 are the same.
+Then, assume that the population variance is the same.
+- _Which t-test should you choose?_
+- _What’s your hypothesis?_  
+
+Run the test in R. 
+
+- _What’s your conclusion?_  
+
+```R
+### your code here ###
+```
+
+## Correlation coefficient
+Calculate the pairwise correlation between year, temperature, and fuel price. Present it in both the plot (scatter plot) and correlation matrix.
+
+```R
+### your code here ###
+```
+
+
+```R
+### your code here ###
+```
+
+
+## Advanced
+Try this section after you finish all previous sections.
+
+### Fancy plots
+#### make a scatter plot coloured by year.
+
+```R
+### your code here ##
+
+```
+
+#### create a density plot, correlation coefficient score, and confidence interval.
+ _(HINT: ```??pairs.panels```)_
+
+```R
+# install.packages('psych')
+library(psych)
+### your code here ###
+
+```
+
+
+### The simple linear regression model
+
+#### Fit a simple linear regression model:
+Independent variable: CPI (x) - Dependent variable: Fuel price (y)
+
+ - _What does the p-value in the returned table stand for?_ - What is the formula of this model?
+
+
+```R
+### your code here ###
+```
+
+
+#### Draw the scatter plot and the fitted regression line.
+
+```R
+### your code here ###
+```
+
+### Draw the residuals plot.
+- _How well is the variance of CPI  explained by the fuel price?_
+
+```R
+### your code here ###
+```
+
+
+
+### Discrete data
+For this section we will try to fit a linear model with independent variables that are of a discrete data type.
+
+Fit a model for CPI with store, year, temperature, fuel price, and unemployment rate as explanatory variables. Note that store and year should be considered categorical data in this case.
+
+This will return a long table. When we consider categorical information as a dependent variable, We use a dummy variable for the calculations.
+
+- _What are the reference points for stores and years?_
+```R
+### your code here ###
+```
+
+### Draw the residual plot again
+- _Can CPI be explained better, using this model?_
+
+```R
+### your code here ###
+```
+
+
+### ANOVA
+Fit a two-way ANOVA model: CPI = Store + year + e. 
+- _Do your degrees of freedom make sense? (If it is 1, you may forget to convert your data type as factor)_ 
+- _What conclusion can you draw from these results?_
+
+```R
+### your code here ###
+```
