@@ -3,7 +3,7 @@
 
 ## Data
 Load the data set into the R environment. This data set has been collected by Walmart for researching variables that might influence the CPI score (**C**onsumer **p**rice **i**ndex).
-You can download the .csv [here.](https://github.com/troe27/UU-RSTATS01/blob/main/data/walmart.csv.gz)
+You can download the .csv [here.](https://github.com/troe27/UU-RSTATS01/raw/refs/heads/main/data/walmart.csv.gz)
 
 
 ```R
