@@ -28,12 +28,13 @@ Making some simple plots is a smart way of knowing our data set in the first sta
 plot(x = factor(data$year), y = data$CPI, xlab = "Year", ylab = "CPI")
 ```
 
+![boxplot](./figures/fig1.png)
 
 #### A scatter plot. x: Unemployment, y: CPI
 ```R
 plot(x = data$Unemployment, y = data$CPI, pch = 20, xlab = "Unemployment", ylab = "CPI")
 ```
-
+![scatterplot](./figures/fig2.png)
 
 
 ## Descriptive statistics
@@ -132,6 +133,7 @@ A matrix: 3 × 3 of type dbl
 plot(data[, c(2, 5, 6)])
 ```
 
+![correlation_plots](./figures/fig3.png)
 
 ## Advanced
 Try this section after you finish all previous sections.
@@ -142,6 +144,7 @@ Try this section after you finish all previous sections.
 ```R
 pairs(data[, c(2, 5, 6)], pch = 20, col = rainbow(4)[factor(data$year)])
 ```
+![coloured_corr](./figures/fig4.png)
 
 #### create a density plot, correlation coefficient score, and confidence interval.
  _(HINT: ```??pairs.panels```)_
@@ -161,6 +164,7 @@ pairs.panels(
     ci = TRUE
 )
 ```
+![panel](./figures/fig5.png)
 
 
 ### The simple linear regression model
@@ -202,6 +206,7 @@ summary(fit)
 plot(data$Fuel_Price~data$CPI, pch=20)
 abline(a=3.7473154, b=-0.0020740, col='red')
 ```
+![regression](./figures/fig6.png)
 
 ### Draw the residuals plot.
 - _How well is the variance of CPI  explained by the fuel price?_
@@ -211,6 +216,7 @@ plot(x = fit$fitted.values,y = fit$residual, pch = 20, xlab = "Fitted value", yl
 abline(h = 0, col='red')
 ```
 
+![residuals](./figures/fig7.png)
 
 
 ### Discrete data
@@ -294,12 +300,12 @@ summary(fit)
 ### Draw the residual plot again
 - _Can CPI be explained better, using this model?_
 
-```
+```R
 plot(x = fit$fitted.values,y = fit$residual, pch = 20, xlab = "Fitted value", ylab = "Residual")
 abline(h = 0, col='red')
 ```
 
-
+![residuals](./figures/fig8.png)
 
 ### ANOVA
 Fit a two-way ANOVA model: CPI = Store + year + e. 
