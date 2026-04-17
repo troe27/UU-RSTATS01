@@ -228,7 +228,7 @@ This will return a long table. When we consider categorical information as a dep
 
 - _What are the reference points for stores and years?_
 ```R
-fit = lm(Fuel_Price ~ factor(Store) + factor(year), data)
+fit = lm(CPI ~ Fuel_Price + factor(Store) + factor(year), data)
 summary(fit)
 ```
 
