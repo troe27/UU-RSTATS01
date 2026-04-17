@@ -128,7 +128,7 @@ For this section we will try to fit a linear model with independent variables th
 
 Fit a model for CPI with store, year, temperature, fuel price, and unemployment rate as explanatory variables. Note that store and year should be considered categorical data in this case.
 
-This will return a long table. When we consider categorical information as a dependent variable, We use a dummy variable for the calculations.
+This will return a long table. When we consider categorical information as a independent variable, We use a dummy variable for the calculations.
 
 - _What are the reference points for stores and years?_
 ```R
